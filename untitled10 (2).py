@@ -15,21 +15,9 @@ drive.mount('/content/drive')
 
 df = pd.read_csv('/content/drive/MyDrive/dataset/200k_train.csv')
 
-# for i, item in enumerate(df['created']):
-#       time = datetime.strptime(item, "%Y-%m-%d %H:%M:%S")
-#       df.loc[i, 'created'] = int(time.minute)
-
 df.head()
 
-# df = df.drop_duplicates(subset=['Segment', 'oblast', 'city', 'os', 'osv'])
-
 df.info()
-
-# df = df.drop_duplicates(subset=['Segment', 'oblast', 'city', 'os', 'osv'])
-# new_index = range(len(df))
-# df = df.reindex(new_index)
-# df = df.dropna()
-# df.head(50)
 
 def get_stat(df):
   ans = [0, 0, 0, 0, 0,]
